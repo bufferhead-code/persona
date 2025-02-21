@@ -1,0 +1,106 @@
+---
+import {Icon} from "astro-icon/components";
+import Button from "./Button.astro";
+import {Image} from "astro:assets";
+import portraitImage from '../assets/portrait.jpg';
+import {Icon} from 'astro-icon/components'
+---
+
+
+<header class="relative isolate pt-8 pb-3 border-b border-gray-200">
+    <div class="relative h-[120px] inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-16 top-full -mt-16 transform-gpu opacity-50 blur-3xl xl:left-1/2 xl:-ml-80">
+            <div class="aspect-[1154/678] w-[72.125rem] bg-gradient-to-br from-blue-400 to-sky-400"
+                 style="clip-path: polygon(100% 38.5%, 82.6% 100%, 60.2% 37.7%, 52.4% 32.1%, 47.5% 41.8%, 45.2% 65.6%, 27.5% 23.4%, 0.1% 35.3%, 17.9% 0%, 27.7% 23.4%, 76.2% 2.5%, 74.2% 56%, 100% 38.5%);"></div>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-px bg-gray-900/5"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 -mt-14 sm:px-6 lg:px-8">
+        <div class="mx-auto flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
+            <div class="lg:flex  gap-x-8">
+                <div class="flex justify-center">
+                    <div class="p-1.5 shadow border border-gray-200 rounded-full">
+                        <Image src={portraitImage}
+                               alt="Portrait Image"
+                               class="domain-logo relative h-46 w-46 flex-none rounded-full ring-1 ring-gray-900/10"/>
+                    </div>
+                </div>
+                <div class="pt-18">
+                    <h1 class="text-2xl font-semibold leading-6 text-gray-900">John Doe
+                    </h1>
+                    <div class="text-xs md:text-sm md:leading-6 font-medium text-gray-600 flex flex-col space-y-1.5 md:space-y-0.5 pt-2.5">
+                        <div class="flex items-center space-x-1.5">
+                            <Icon name="heroicons:briefcase-20-solid"
+                                  class="size-4 text-gray-400 inline-block"/>
+                            <p class="flex-1">Full-Stack Engineer at ACME Corp.</p>
+                        </div>
+                        <div class="flex items-center space-x-1.5">
+                            <Icon name="heroicons:map-pin-20-solid" class="size-4 text-gray-400 inline-block"/>
+                            <p class="flex-1">Vienna, Austria</p>
+                        </div>
+                        <div class="flex items-center space-x-1.5">
+                            <Icon name="heroicons:academic-cap-20-solid"
+                                  class="size-4 text-gray-400 inline-block"/>
+                            <p class="flex-1">Computer Science at Vienna University of Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-x-2 sm:gap-x-4">
+                <Button
+                        variant="primary"
+                        href="https://www.github.com"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        class="hidden sm:flex"
+                >
+                    <Icon name="logos:github-icon" class="size-5"/>
+                </Button>
+
+                <Button
+                        variant="primary"
+                        href="https://www.linkedin.com/in/yourprofile"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        class="hidden sm:flex"
+                >
+                    <Icon name="logos:linkedin-icon" class="size-5"/>
+                </Button>
+
+                <Button
+                        variant="primary"
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        class="hidden sm:flex"
+                >
+                    <Icon name="logos:instagram-icon" class="size-5 "/>
+                </Button>
+                <Button
+                        variant="primary"
+                        href="mailto:test@example.com"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        class="hidden sm:flex"
+                >
+                    <Icon name="heroicons:envelope" class="size-5 text-gray-400 -ml-1"/>
+                    <span>Contact me</span>
+                </Button>
+
+                <div class="relative sm:hidden">
+                    <Button
+                            variant="menu"
+                            class="mobile-menu-button"
+                            ariaLabel="Open menu"
+                    >
+                        <span class="sr-only">More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                             aria-hidden="true" class="h-5 w-5 text-gray-500">
+                            <path d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"></path>
+                        </svg>
+                    </Button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

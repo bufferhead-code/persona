@@ -1,0 +1,54 @@
+---
+interface Props {
+    type?: "button" | "submit" | "reset";
+    variant?: "primary" | "secondary" | "menu" | "icon" | "refresh";
+    class?: string;
+    href?: string;
+    target?: string;
+    rel?: string;
+    title?: string;
+    ariaLabel?: string;
+}
+
+const {
+    type = "button",
+    variant = "primary",
+    class: className,
+    href,
+    target,
+    rel,
+    title,
+    ariaLabel,
+} = Astro.props;
+
+const baseStyles = {
+    primary: "rounded-md flex items-center space-x-2 bg-white px-3 py-2 text-sm font-semibold border border-gray-300 transition text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+    secondary: "text-sm font-semibold leading-6 text-gray-900",
+    menu: "-m-3 block p-3",
+    icon: "text-gray-400 hover:text-gray-600 transition p-1",
+    refresh: "rounded flex items-center space-x-1 bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+};
+---
+
+{
+    href ? (
+        <a
+            href={href}
+            target={target}
+            rel={rel}
+            class={`${baseStyles[variant]} ${className}`}
+            title={title}
+        >
+            <slot />
+        </a>
+    ) : (
+        <button
+            type={type}
+            class={`${baseStyles[variant]} ${className}`}
+            aria-label={ariaLabel}
+            title={title}
+        >
+            <slot />
+        </button>
+    )
+} 

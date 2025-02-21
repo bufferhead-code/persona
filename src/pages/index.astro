@@ -1,11 +1,127 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import NavigationItem from '../components/NavigationItem.astro';
+import MainSection from "../components/MainSection.astro";
+import Header from "../components/Header.astro";
+import AboutSection from "../components/About/AboutSection.astro";
+import ExperienceSection from "../components/Experience/ExperienceSection.astro";
+import ReferenceSection from "../components/Reference/ReferenceSection.astro";
+import StackSection from '@components/Stack/StackSection.astro';
+import ContactFormOne from "../components/Contact/ContactFormOne.astro";
+import EndorsementSection from "../components/Endorsement/EndorsementSection.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const navigationItems = [
+    {
+        title: "About me",
+        icon: 'heroicons:user-circle',
+        name: 'about',
+        component: AboutSection
+    },
+    {
+        title: "Experience",
+        icon: 'heroicons:briefcase',
+        name: 'experience',
+        component: ExperienceSection
+    },
+    {
+        title: "Endorsements",
+        icon: 'heroicons:chat-bubble-left-right',
+        name: 'endorsements',
+        component: EndorsementSection
+    },
+    {
+        title: "Stack",
+        icon: 'heroicons:code-bracket-square',
+        name: 'stack',
+        component: StackSection
+    },
+    {
+        title: "References",
+        icon: 'heroicons:document-magnifying-glass',
+        name: 'references',
+        component: ReferenceSection
+    },
+    {
+        title: "Contact me",
+        icon: 'heroicons:chat-bubble-bottom-center-text',
+        name: 'contact',
+        component: ContactFormOne
+    },
+];
 ---
 
 <Layout>
-	<Welcome />
+    <main>
+        <Header></Header>
+        <div class="bg-gray-50">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                <div class="mx-auto  grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-7">
+                    <div class="lg:sticky bg-white border border-gray-200    rounded-lg px-4 py-2 top-24 lg:col-start-1 lg:row-end-2 lg:col-span-2 row-start-2 row-span-1 lg:row-span-2">
+                        <nav class="flex flex-1  flex-col py-1 hidden md:block" aria-label="Sidebar">
+                            <ul role="list" class="-mx-2 space-y-1">
+                                {
+                                    navigationItems.map((item) => (
+                                            <NavigationItem
+                                                    label={item.title}
+                                                    icon={item.icon}
+                                                    name={item.name}
+                                            />
+                                    ))
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="lg:col-start-3 bg-white ring-1  ring-gray-900/5 sm:mx-0 sm:rounded-lg lg:col-span-5 lg:row-span-2 lg:row-end-2 shadow scroll-smooth">
+                        <main>
+                            {
+                                navigationItems.map((item) => (
+                                        <MainSection icon={item.icon} title={item.title} name={item.name}>
+                                            <item.component></item.component>
+                                        </MainSection>
+                                ))
+                            }
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 </Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("main section");
+        const navLinks = document.querySelectorAll("nav a");
+
+        let visibleSections : Array<Element> = [];
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                // check all entries and add or remove them from visibleSections according to isIntersecting
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting) {
+                        visibleSections.push(entry.target);
+                    } else {
+                        visibleSections = visibleSections.filter((section) => section !== entry.target);
+                    }
+                });
+
+                // get the first item in visibleSections according to the dom
+                visibleSections = visibleSections.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+                if(visibleSections.length === 0) return;
+                const entry = visibleSections[0];
+
+                const activeLinks = Array.from(navLinks).filter(el => el.getAttribute("href") === '#' + entry.getAttribute("id"));
+                activeLinks.forEach((link) => link.setAttribute("aria-current", "page"));
+
+                // remove from aria-current from all but activeLinks
+                Array.from(navLinks).filter(el => !activeLinks.includes(el)).forEach((link) => link.removeAttribute("aria-current"));
+            },
+            { threshold: 0.2 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    });
+
+</script>

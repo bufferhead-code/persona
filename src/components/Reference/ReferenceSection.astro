@@ -1,0 +1,36 @@
+---
+import {Image} from "astro:assets";
+
+import acmeLogo from "@assets/placeholder/acme.svg";
+
+import alphawaveLogo from "@assets/placeholder/alphawave.svg";
+import altshiftLogo from "@assets/placeholder/altshift.svg";
+import boltshiftLogo from "@assets/placeholder/boltshift.svg";
+import codecraftLogo from "@assets/placeholder/codecraft.svg";
+import cubekitLogo from "@assets/placeholder/cubekit.svg";
+import easytaxLogo from "@assets/placeholder/easytax.svg";
+import eightballLogo from "@assets/placeholder/eightball.svg";
+import euphoriaLogo from "@assets/placeholder/euphoria.svg";
+import ReferenceCard from "./ReferenceCard.astro";
+import SectionTitle from "../Common/SectionTitle.astro";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-5">
+    <ReferenceCard image={acmeLogo} title="Acme Inc."/>
+
+    <ReferenceCard image={alphawaveLogo} title="AlphaWave"/>
+
+    <ReferenceCard image={altshiftLogo} title="AltShift"/>
+
+    <ReferenceCard image={boltshiftLogo} title="BoltShift"/>
+
+    <ReferenceCard image={codecraftLogo} title="CodeCraft"/>
+
+    <ReferenceCard image={cubekitLogo} title="CubeKit"/>
+
+    <ReferenceCard image={easytaxLogo} title="EasyTax"/>
+
+    <ReferenceCard image={eightballLogo} title="EightBall"/>
+
+    <ReferenceCard image={euphoriaLogo} title="Euphoria"/>
+</div>

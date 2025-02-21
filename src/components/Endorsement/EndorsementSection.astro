@@ -1,0 +1,32 @@
+---
+import EndorsementCard from "./EndorsementCard.astro";
+
+// Create custom avatars at https://getavataaars.com
+import testimonialsImage1 from "@assets/placeholder/testimonial_1.svg";
+import testimonialsImage2 from "@assets/placeholder/testimonial_2.svg";
+---
+
+<div class=" py-4">
+    <div class="grid gap-6 md:grid-cols-2">
+        <!-- Testimonial Card 1 -->
+        <EndorsementCard
+                name="John Doe"
+                role="CEO at Company"
+                image={testimonialsImage1}
+        >
+            <p>
+                "I didn't believe in perfection until I met you. Now I question everything I know about life, the
+                universe, and my own worth."
+            </p>
+
+        </EndorsementCard>
+        <EndorsementCard
+                name="John Doe"
+                role="CEO at Company"
+                image={testimonialsImage2}>
+            <p>
+                "Best expierence I've ever had working with a person ever. Like honestly how can he be such a perfect human being."
+            </p>
+        </EndorsementCard>
+    </div>
+</div>
