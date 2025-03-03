@@ -1,24 +1,20 @@
 ---
-
-import {Image} from "astro:assets";
 import {Icon} from "astro-icon/components";
 
 interface Props {
     title: string;
-    description?: string;
     icon: string;
     name: string;
 }
 
-const {title, description, icon, name} = Astro.props;
+const {title, icon, name} = Astro.props;
 ---
-
 
 <section id={name} class="first-of-type:rounded-t-lg first-of-type:overflow-hidden not-first-of-type:border-t border-gray-200">
     <div>
         <dt class="flex bg-gray-50 font-medium text-gray-800 space-x-3 items-center border-gray-200 border-b text-base md:text-lg px-4 py-2 md:py-3">
             <Icon name={icon} class="pointer-events-none left-4 top-[13px] h-7 w-7 md:h-8 md:w-8 rounded-full text-blue-500 inline-block bg-white border border-gray-300 rounded-fill p-1" />
-            <span>{title}</span></dt><!---->
+            <span>{title}</span></dt>
         <dl class="divide-y divide-gray-200 px-4 md:px-6 py-4">
             <slot></slot>
         </dl>

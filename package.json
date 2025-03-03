@@ -6,7 +6,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "fix": "npm run lint:fix && npm run format"
   },
   "dependencies": {
     "@iconify-json/devicon": "^1.2.16",
@@ -17,7 +22,12 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.7",
+    "@typescript-eslint/parser": "^8.25.0",
     "astro-icon": "^1.1.5",
+    "eslint": "^9.21.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.5.1",
     "prettier-plugin-astro": "^0.14.1",
     "tailwind-merge": "^3.0.1",

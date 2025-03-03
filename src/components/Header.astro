@@ -3,7 +3,7 @@ import {Icon} from "astro-icon/components";
 import Button from "./Button.astro";
 import {Image} from "astro:assets";
 import portraitImage from '../assets/portrait.jpg';
-import {Icon} from 'astro-icon/components'
+import {socialIcons} from "../config/social";
 ---
 
 
@@ -47,37 +47,19 @@ import {Icon} from 'astro-icon/components'
                 </div>
             </div>
             <div class="flex items-center gap-x-2 sm:gap-x-4">
-                <Button
-                        variant="primary"
-                        href="https://www.github.com"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        class="flex"
-                >
-                    <Icon name="logos:github-icon" class="size-5"/>
-                </Button>
+                {socialIcons.map((item) => (
+                    <Button
+                            variant="primary"
+                            href={item.url}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            class="flex"
+                    >
+                        <Icon name={item.icon} class="size-5"/>
+                    </Button>
+                ))}
 
                 <Button
-                        variant="primary"
-                        href="https://www.linkedin.com/in/yourprofile"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        class="flex"
-                >
-                    <Icon name="logos:linkedin-icon" class="size-5"/>
-                </Button>
-
-                <Button
-                        variant="primary"
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        class="flex"
-                >
-                    <Icon name="logos:instagram-icon" class="size-5 "/>
-                </Button>
-                <Button
-                        variant="primary"
                         href="mailto:test@example.com"
                         target="_blank"
                         rel="nofollow noopener noreferrer"

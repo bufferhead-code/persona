@@ -58,7 +58,7 @@ const navigationItems = [
                 <div class="mx-auto  grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-7">
                     <div class="lg:sticky bg-white border border-gray-200    rounded-lg px-4 py-2 top-24 lg:col-start-1 lg:row-end-2 lg:col-span-2 row-start-2 row-span-1 lg:row-span-2">
                         <nav class="flex flex-1  flex-col py-1 hidden md:block" aria-label="Sidebar">
-                            <ul role="list" class="-mx-2 space-y-1">
+                        <ul class="-mx-2 space-y-1">
                                 {
                                     navigationItems.map((item) => (
                                             <NavigationItem
@@ -68,8 +68,8 @@ const navigationItems = [
                                             />
                                     ))
                                 }
-                            </ul>
-                        </nav>
+                        </ul>
+                    </nav>
                     </div>
                     <div class="lg:col-start-3 bg-white ring-1  ring-gray-900/5 sm:mx-0 sm:rounded-lg lg:col-span-5 lg:row-span-2 lg:row-end-2 shadow scroll-smooth">
                         <main>
