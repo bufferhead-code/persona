@@ -11,11 +11,11 @@ const { count, title, icon } = Astro.props;
 
   <div class="w-full flex items-center py-2.5">
     <div class="flex w-full justify-between">
-      <div class="text-3xl px-2 font-semibold text-gray-800">{count}</div>
+      <div class="text-3xl px-2 font-semibold text-base-800">{count}</div>
       <div
           class="flex space-x-2 items-center px-2 font-medium text-sm  "
       >
-        {icon && <Icon name={icon} class="h-5 w-5 text-blue-500" />}
+        {icon && <Icon name={icon} class="h-5 w-5 text-primary-500" />}
         <span>
         {title}
       </span>

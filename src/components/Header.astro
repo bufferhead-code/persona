@@ -7,40 +7,40 @@ import {socialIcons} from "../config/social";
 ---
 
 
-<header class="relative isolate pt-8 pb-3 border-b border-gray-200">
+<header class="relative isolate pt-8 pb-3 border-b border-base-200">
     <div class="relative h-[120px] inset-0 -z-10 overflow-hidden" aria-hidden="true">
         <div class="absolute left-16 top-full -mt-16 transform-gpu opacity-50 blur-3xl xl:left-1/2 xl:-ml-80">
-            <div class="aspect-[1154/678] w-[72.125rem] bg-gradient-to-br from-blue-400 to-sky-400"
+            <div class="aspect-[1154/678] w-[72.125rem] bg-gradient-to-br from-primary-400 to-sky-400"
                  style="clip-path: polygon(100% 38.5%, 82.6% 100%, 60.2% 37.7%, 52.4% 32.1%, 47.5% 41.8%, 45.2% 65.6%, 27.5% 23.4%, 0.1% 35.3%, 17.9% 0%, 27.7% 23.4%, 76.2% 2.5%, 74.2% 56%, 100% 38.5%);"></div>
         </div>
-        <div class="absolute inset-x-0 bottom-0 h-px bg-gray-900/5"></div>
+        <div class="absolute inset-x-0 bottom-0 h-px bg-base-900/5"></div>
     </div>
     <div class="mx-auto max-w-7xl px-4 -mt-30 lg:-mt-14 sm:px-6 lg:px-8">
         <div class="mx-auto space-y-6 lg:space-y-0 flex-col lg:flex-row flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
             <div class="lg:flex  gap-x-8">
                 <div class="flex justify-center">
-                    <div class="p-1.5 shadow border border-gray-200 rounded-full">
+                    <div class="p-1.5 shadow border border-base-200 rounded-full">
                         <Image src={portraitImage}
                                alt="Portrait Image"
-                               class="domain-logo relative h-46 w-46 flex-none rounded-full ring-1 ring-gray-900/10"/>
+                               class="domain-logo relative h-46 w-46 flex-none rounded-full ring-1 ring-base-900/10"/>
                     </div>
                 </div>
                 <div class="lg:pt-18">
-                    <h1 class="text-2xl font-semibold leading-6 text-gray-900">John Doe
+                    <h1 class="text-2xl font-semibold leading-6 text-base-900">John Doe
                     </h1>
-                    <div class="text-sm md:leading-6 font-medium text-gray-600 flex flex-col space-y-1.5 md:space-y-0.5 pt-2.5">
+                    <div class="text-sm md:leading-6 font-medium text-base-600 flex flex-col space-y-1.5 md:space-y-0.5 pt-2.5">
                         <div class="flex items-center space-x-1.5">
                             <Icon name="heroicons:briefcase-20-solid"
-                                  class="size-4 text-gray-400 inline-block"/>
+                                  class="size-4 text-base-400 inline-block"/>
                             <p class="flex-1">Full-Stack Engineer at ACME Corp.</p>
                         </div>
                         <div class="flex items-center space-x-1.5">
-                            <Icon name="heroicons:map-pin-20-solid" class="size-4 text-gray-400 inline-block"/>
+                            <Icon name="heroicons:map-pin-20-solid" class="size-4 text-base-400 inline-block"/>
                             <p class="flex-1">Vienna, Austria</p>
                         </div>
                         <div class="flex items-center space-x-1.5">
                             <Icon name="heroicons:academic-cap-20-solid"
-                                  class="size-4 text-gray-400 inline-block"/>
+                                  class="size-4 text-base-400 inline-block"/>
                             <p class="flex-1">Computer Science at Vienna University of Technology</p>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ import {socialIcons} from "../config/social";
                         rel="nofollow noopener noreferrer"
                         class="flex"
                 >
-                    <Icon name="heroicons:envelope" class="size-5 text-gray-400 -ml-1"/>
+                    <Icon name="heroicons:envelope" class="size-5 text-base-400 -ml-1"/>
                     <span>Contact me</span>
                 </Button>
             </div>
