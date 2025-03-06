@@ -12,7 +12,7 @@ const { label = false, icon, name } = Astro.props;
 ---
 
 <li>
-    <a href={'#' + name} class="w-full group flex group gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-base-700 hover:text-primary-600 hover:bg-base-50 aria-[current]:border aria-[current]:border-base-200 aria-[current]:bg-base-50 aria-[current]:text-primary-600">
+    <a href={'/#' + name} class="w-full group flex group gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-base-700 hover:text-primary-600 hover:bg-base-50 aria-[current]:border aria-[current]:border-base-200 aria-[current]:bg-base-50 aria-[current]:text-primary-600">
         <Icon 
             name={icon}
             class:list={`h-6 w-6 shrink-0 text-base-400 group-hover:text-primary-600 group-aria-[current]:text-primary-600`}

@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutSection from "../components/About/AboutSection.astro";
+import ExperienceSection from "../components/Experience/ExperienceSection.astro";
+import EndorsementSection from "../components/Endorsement/EndorsementSection.astro";
+import StackSection from "../components/Stack/StackSection.astro";
+import ReferenceSection from "../components/Reference/ReferenceSection.astro";
+import ContactFormOne from "../components/Contact/ContactFormOne.astro";
+import MainSection from "../components/MainSection.astro";
+
+const categories = [
+    {
+        title: 'About Sections',
+        icon: "heroicons:user-circle",
+        items: [
+            {
+                path: '/src/components/About/AboutSection.astro',
+                component: AboutSection
+            }
+        ],
+    },
+    {
+        title: 'Experience Sections',
+        icon: "heroicons:briefcase",
+        items: [
+            {
+                path: '/src/components/Experience/ExperienceSection.astro',
+                component: ExperienceSection
+            }
+        ],
+    },
+    {
+        title: 'Endorsement Sections',
+        icon: "heroicons:chat-bubble-left-right",
+        items: [
+            {
+                path: '/src/components/Endorsement/EndorsementSection.astro',
+                
+                component: EndorsementSection
+            }
+        ],
+    },
+    {
+        title: 'Stack Sections',
+        icon: "heroicons:code-bracket-square",
+        items: [
+            {
+                path: '/src/components/Stack/StackSection.astro',
+                component: StackSection
+            }
+        ],
+    },
+    {
+        title: 'Reference Sections',
+        icon: "heroicons:document-magnifying-glass",
+        items: [
+            {
+                path: '/src/components/Reference/ReferenceSection.astro',
+                component: ReferenceSection
+            }
+        ],
+    },
+    {
+        title: 'Contact Sections',
+        icon: "heroicons:chat-bubble-bottom-center-text",
+        items: [
+            {
+                path: '/src/components/Contact/ContactFormOne.astro',
+                component: ContactFormOne
+            }
+        ],
+    },
+];
+---
+
+<Layout>
+    {
+        categories.map((category) => (
+                <MainSection icon={category.icon} title={category.title} name={category.name}>
+                    {
+                        category.items.map((component) => (
+                                <div>
+                                    <div class="border-b border-base-200 flex items-between">
+                                        <div class="flex space-x-2 text-gray-600 items-center w-full justify-between pb-2.5">
+                                            <div class="bg-base-100 border border-base-200 rounded font-mono text-base-700 text-xs px-2 py-1.5 font-semibold">
+                                                {component.path}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3">
+                                        <component.component></component.component>
+                                    </div>
+                                </div>
+                        ))
+                    }
+                </MainSection>
+        ))
+    }
+</Layout>
+
