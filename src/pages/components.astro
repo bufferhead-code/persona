@@ -3,11 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import AboutSectionOne from "../components/About/AboutSectionOne.astro";
 import AboutSectionTwo from "../components/About/AboutSectionTwo.astro";
 
-import ExperienceSection from "../components/Experience/ExperienceSection.astro";
+import ExperienceSectionOne from "../components/Experience/ExperienceSectionOne.astro";
+import ExperienceSectionTwo from "../components/Experience/ExperienceSectionTwo.astro";
 import EndorsementSection from "../components/Endorsement/EndorsementSection.astro";
-import StackSection from "../components/Stack/StackSection.astro";
-import ReferenceSection from "../components/Reference/ReferenceSection.astro";
+import StackSectionOne from "../components/Stack/StackSectionOne.astro";
+import StackSectionTwo from "../components/Stack/StackSectionTwo.astro";
+import ReferenceSectionOne from "../components/Reference/ReferenceSectionOne.astro";
+import ReferenceSectionTwo from "../components/Reference/ReferenceSectionTwo.astro";
 import ContactFormOne from "../components/Contact/ContactFormOne.astro";
+import ContactFormTwo from "../components/Contact/ContactFormTwo.astro";
 import MainSection from "../components/MainSection.astro";
 
 const items = [
@@ -24,10 +28,16 @@ const items = [
         component: AboutSectionTwo
     },
     {
-        title: 'Experience Section',
+        title: 'Experience Section One',
         icon: "heroicons:briefcase",
-        path: '/src/components/Experience/ExperienceSection.astro',
-        component: ExperienceSection
+        path: '/src/components/Experience/ExperienceSectionOne.astro',
+        component: ExperienceSectionOne
+    },
+    {
+        title: 'Experience Section Two',
+        icon: "heroicons:briefcase",
+        path: '/src/components/Experience/ExperienceSectionTwo.astro',
+        component: ExperienceSectionTwo
     },
     {
         title: 'Endorsement Section',
@@ -36,22 +46,40 @@ const items = [
         component: EndorsementSection
     },
     {
-        title: 'Stack Section',
+        title: 'Stack Section One',
         icon: "heroicons:code-bracket-square",
-        path: '/src/components/Stack/StackSection.astro',
-        component: StackSection
+        path: '/src/components/Stack/StackSectionOne.astro',
+        component: StackSectionOne
     },
     {
-        title: 'Reference Section',
+        title: 'Stack Section Two',
+        icon: "heroicons:code-bracket-square",
+        path: '/src/components/Stack/StackSectionTwo.astro',
+        component: StackSectionTwo
+    },
+    {
+        title: 'Reference Section One',
         icon: "heroicons:document-magnifying-glass",
-        path: '/src/components/Reference/ReferenceSection.astro',
-        component: ReferenceSection
+        path: '/src/components/Reference/ReferenceSectionOne.astro',
+        component: ReferenceSectionOne
     },
     {
-        title: 'Contact Form',
+        title: 'Reference Section Two',
+        icon: "heroicons:document-magnifying-glass",
+        path: '/src/components/Reference/ReferenceSectionTwo.astro',
+        component: ReferenceSectionTwo
+    },
+    {
+        title: 'Contact Form One',
         icon: "heroicons:chat-bubble-bottom-center-text",
         path: '/src/components/Contact/ContactFormOne.astro',
         component: ContactFormOne
+    },
+    {
+        title: 'Contact Form Two',
+        icon: "heroicons:chat-bubble-bottom-center-text",
+        path: '/src/components/Contact/ContactFormOne.astro',
+        component: ContactFormTwo
     },
 ];
 ---

@@ -1,9 +1,9 @@
 import AboutSectionOne from "@components/About/AboutSectionOne.astro";
-import ExperienceSection from "../components/Experience/ExperienceSection.astro";
-import ReferenceSection from "../components/Reference/ReferenceSection.astro";
-import StackSection from "@components/Stack/StackSection.astro";
-import ContactFormOne from "../components/Contact/ContactFormOne.astro";
-import EndorsementSection from "../components/Endorsement/EndorsementSection.astro";
+import ExperienceSectionOne from "@components/Experience/ExperienceSectionOne.astro";
+import ReferenceSectionOne from "@components/Reference/ReferenceSectionOne.astro";
+import StackSectionOne from "@components/Stack/StackSectionOne.astro";
+import ContactFormOne from "@components/Contact/ContactFormOne.astro";
+import EndorsementSection from "@components/Endorsement/EndorsementSection.astro";
 
 export const sections = [
   {
@@ -16,7 +16,7 @@ export const sections = [
     title: "Experience",
     icon: "heroicons:briefcase",
     name: "experience",
-    component: ExperienceSection,
+    component: ExperienceSectionOne,
   },
   {
     title: "Endorsements",
@@ -28,13 +28,13 @@ export const sections = [
     title: "Stack",
     icon: "heroicons:code-bracket-square",
     name: "stack",
-    component: StackSection,
+    component: StackSectionOne,
   },
   {
     title: "References",
     icon: "heroicons:document-magnifying-glass",
     name: "references",
-    component: ReferenceSection,
+    component: ReferenceSectionOne,
   },
   {
     title: "Contact me",

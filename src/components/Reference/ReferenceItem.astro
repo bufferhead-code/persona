@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  image: ImageMetadata;
+}
+
+const { title, image } = Astro.props;
+---
+
+<div
+  class="flex items-center gap-5 px-4 py-6 border-base-200 border-b "
+>
+  <Image class="h-8 select-none w-full" src={image} alt={title} />
+</div>

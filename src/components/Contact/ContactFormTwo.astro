@@ -1,27 +1,18 @@
 ---
-import { Image } from "astro:assets";
 import FormInputField from "../Form/FormInputField.astro";
 import FormInputTextarea from "../Form/FormInputTextarea.astro";
 import ButtonPrimary from "../Button.astro";
-import servicesExampleImage from "@assets/placeholder/services_example.jpg";
 import { Icon } from "astro-icon/components";
 import {socialIcons} from "../../config/social";
 ---
 
 <div
-  class="flex items-center justify-center px-4 py-8 border-t border-base-200 container mx-auto relative irolate"
+  class="flex items-center justify-center px-4 py-8 container mx-auto relative irolate"
 >
   <div
     class="overflow-hidden w-full flex gap-x-12 flex-col md:flex-row relative items-center"
   >
-    <div class="md:w-3/7 flex">
-      <Image
-        src={servicesExampleImage}
-        alt="Contact me"
-        class="w-full aspect-3/4 max-h-full object-cover rounded-lg"
-      />
-    </div>
-    <div class="md:w-4/7">
+    <div>
       <h2 class="text-3xl font-bold mb-2">Work with me</h2>
       <p class="text-base-600 mb-6">
         Lorem aliquip sit consequat tempor voluptate cupidatat elit cillum

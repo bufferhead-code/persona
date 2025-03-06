@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  description?: string;
+  icon?: string;
+}
+
+const { title, description, icon } = Astro.props;
+---
+
+<div
+  class="flex shadow-xs items-center gap-5 px-4 py-3 bg-white border-base-200 border rounded-xl"
+>
+  {
+    icon ? (
+      <div class="w-14 h-14 p-2.5 rounded-full border border-base-200 flex-shrink-0">
+        <Icon name={icon} class="w-full h-full object-contain" />
+      </div>
+    ) : (
+      <div class="w-14 h-14 rounded-full bg-base-100 flex-shrink-0" />
+    )
+  }
+
+  <div>
+    <h2 class="font-semibold text-base-900">{title}</h2>
+    <p class="text-base-500 text-sm font-medium">{description}</p>
+  </div>
+</div>

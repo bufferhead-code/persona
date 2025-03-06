@@ -1,33 +1,26 @@
 ---
-import AboutCard from "./AboutCard.astro";
+import AboutItemOne from "./AboutItemOne.astro";
 ---
 
 <div class=" relative gap-12 items-start">
-    <!-- Left Column -->
-<div class="xl:grid justify-between h-full grid-cols-3">
-    <div class="prose prose-sm col-span-2 pb-4">
-        <p>I am a passionate software engineer with <strong>a strong background in developing scalable web applications </strong> and working across the <strong>full stack</strong>.</p>
-        <ul>
-            <li>Proficient in <strong>JavaScript, TypeScript, and modern web frameworks.</strong></li>
-            <li>Experience with cloud services like <strong>AWS and Azure</strong>.</li>
-            <li>Strong understanding of <strong>database design</strong> and management.</li>
-
-
-        </ul>
+    <div class="xl:grid justify-between h-full grid-cols-3">
+        <div class="prose prose-sm col-span-2 pb-4">
+            <p>I am a passionate software engineer with <strong>a strong background in developing scalable web
+                applications </strong> and working across the <strong>full stack</strong>.</p>
+            <ul>
+                <li>Proficient in <strong>JavaScript, TypeScript, and modern web frameworks.</strong></li>
+                <li>Experience with cloud services like <strong>AWS and Azure</strong>.</li>
+                <li>Strong understanding of <strong>database design</strong> and management.</li>
+            </ul>
+        </div>
+        <div class="grid divide-base-200 divide-y lg:border-0 border-t border-base-200">
+            <AboutItemOne icon="heroicons:cube" title="Completed Projects" count="100+"/>
+            <AboutItemOne
+                    icon="heroicons:briefcase"
+                    title="Years of Experience"
+                    count="10"
+            />
+            <AboutItemOne icon="heroicons:rocket-launch" title="Cups of Coffee" count="100+"/>
+        </div>
     </div>
-
-    <div class="grid divide-base-200 divide-y lg:border-0 border-t border-base-200">
-        <AboutCard icon="heroicons:cube" title="Completed Projects" count="100+"/>
-        <AboutCard
-                icon="heroicons:briefcase"
-                title="Years of Experience"
-                count="10"
-        />
-
-        <!-- Coffee Card -->
-        <AboutCard icon="heroicons:briefcase" title="Cups of Coffee" count="100+"/>
-    </div>
-</div>
-    <!-- Right Column -->
-
 </div>
