@@ -12,10 +12,17 @@ const {title, icon, name} = Astro.props;
 
 <section id={name} class="first-of-type:rounded-t-lg first-of-type:overflow-hidden not-first-of-type:border-t border-base-200">
     <div>
-        <dt class="flex bg-base-50 font-medium text-base-800 space-x-3 items-center border-base-200 border-b text-base md:text-lg px-4 py-2 md:py-3">
-            <Icon name={icon} class="pointer-events-none left-4 top-[13px] h-7 w-7 md:h-8 md:w-8 rounded-full text-primary-500 inline-block bg-white border border-base-300 rounded-fill p-1" />
-            <span>{title}</span></dt>
-        <dl class="divide-y divide-base-200 px-4 md:px-6 py-4">
+        <dt class="flex items-center justify-between bg-base-50 text-base-800 border-base-200  border-b px-4 py-2 md:py-3">
+            <div class="flex  font-medium  space-x-3 items-center text-base md:text-lg ">
+                <Icon name={icon} class="pointer-events-none left-4 top-[13px] h-7 w-7 md:h-8 md:w-8 rounded-full text-primary-500 inline-block bg-white border border-base-300 rounded-fill p-1" />
+                <span>{title}</span>
+            </div>
+            <div>
+                <slot name="header-side"></slot>
+            </div>
+        </dt>
+
+        <dl class="px-4 md:px-6 py-4">
             <slot></slot>
         </dl>
     </div>

@@ -1,4 +1,4 @@
-import AboutSection from "../components/About/AboutSection.astro";
+import AboutSectionOne from "@components/About/AboutSectionOne.astro";
 import ExperienceSection from "../components/Experience/ExperienceSection.astro";
 import ReferenceSection from "../components/Reference/ReferenceSection.astro";
 import StackSection from "@components/Stack/StackSection.astro";
@@ -10,7 +10,7 @@ export const sections = [
     title: "About me",
     icon: "heroicons:user-circle",
     name: "about",
-    component: AboutSection,
+    component: AboutSectionOne,
   },
   {
     title: "Experience",

@@ -1,0 +1,32 @@
+---
+import AboutItem from "./AboutItem.astro";
+---
+
+<div class=" relative gap-12 items-start">
+    <!-- Left Column -->
+<div class="justify-between h-full">
+    <div class="prose prose-sm pb-4">
+        <p>I am a passionate software engineer with <strong>a strong background in developing scalable web applications </strong> and working across the <strong>full stack</strong>.</p>
+        <ul>
+            <li>Proficient in <strong>JavaScript, TypeScript, and modern web frameworks.</strong></li>
+            <li>Experience with cloud services like <strong>AWS and Azure</strong>.</li>
+            <li>Strong understanding of <strong>database design</strong> and management.</li>
+
+
+        </ul>
+    </div>
+
+    <div class="grid lg:grid-cols-3 divide-base-200 divide-y lg:divide-y-0 lg:divide-x lg:border-0 border-t border-base-200">
+        <AboutItem icon="heroicons:cube" title="Completed Projects" count="100+"/>
+        <AboutItem
+                icon="heroicons:briefcase"
+                title="Years of Experience"
+                count="10"
+        />
+        <!-- Coffee Card -->
+        <AboutItem icon="heroicons:briefcase" title="Cups of Coffee" count="100+"/>
+    </div>
+</div>
+    <!-- Right Column -->
+
+</div>
