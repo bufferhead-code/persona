@@ -89,8 +89,8 @@ const items = [
         items.map((item) => (
                 <MainSection icon={item.icon} title={item.title}>
                         <item.component></item.component>
-                    <div slot="header-side">
-                        <div class="bg-base-100 border border-base-200 rounded font-mono text-base-700 text-xs px-2 py-1 font-semibold">
+                    <div class="flex" slot="header-side">
+                        <div class="bg-base-100 border min-w-0 truncate text-ellipsis border-base-200 rounded font-mono text-base-700 text-xs px-2 py-1 font-semibold">
                             {item.path}
                         </div>
                     </div>
