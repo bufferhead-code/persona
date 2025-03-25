@@ -2,9 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import MainSection from "../components/MainSection.astro";
 import {sections} from "../config/sections";
+import { SEO } from "astro-seo";
 ---
 
 <Layout>
+    <Fragment slot="head">
+        <SEO
+                description="Build Astro websites superfast, with easy to customize themes."
+                title="Persona Theme - Bufferthemes"
+        />
+    </Fragment>
     {
         sections.map((item) => (
                 <MainSection icon={item.icon} title={item.title} name={item.name}>

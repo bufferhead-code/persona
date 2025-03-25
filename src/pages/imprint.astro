@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {SEO} from "astro-seo";
 
 ---
 
 <Layout>
+    <Fragment slot="head">
+        <SEO
+                description="Build Astro websites superfast, with easy to customize themes."
+                title="Imprint - Persona Theme"
+        />
+    </Fragment>
     <div class="px-8 py-8 prose">
 
         <h2>Imprint (Legal Notice)</h2>

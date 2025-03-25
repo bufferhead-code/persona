@@ -13,6 +13,7 @@ import ReferenceSectionTwo from "../components/Reference/ReferenceSectionTwo.ast
 import ContactFormOne from "../components/Contact/ContactFormOne.astro";
 import ContactFormTwo from "../components/Contact/ContactFormTwo.astro";
 import MainSection from "../components/MainSection.astro";
+import {SEO} from "astro-seo";
 
 const items = [
     {
@@ -85,6 +86,12 @@ const items = [
 ---
 
 <Layout>
+    <Fragment slot="head">
+        <SEO
+                description="Build Astro websites superfast, with easy to customize themes."
+                title="Components Overview - Persona Theme"
+        />
+    </Fragment>
     {
         items.map((item) => (
                 <MainSection icon={item.icon} title={item.title}>
