@@ -1,5 +1,18 @@
 # Persona
 
+A personal resume and CV theme with experience, endorsements and contact sections, built with Astro and Tailwind CSS.
+
+![Persona theme screenshot](.github/screenshots/desktop.png)
+
+<details>
+<summary>More screenshots</summary>
+
+|                                     Mobile                                     |                                     Full page                                     |
+| :----------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+| <img src=".github/screenshots/mobile.png" alt="Persona on mobile" width="300"> | <img src=".github/screenshots/full-page.png" alt="Persona full page" width="500"> |
+
+</details>
+
 You can find the general documentation and the getting started guide in the [Bufferthemes Docs](https://docs.bufferthemes.com/getting-started).
 
 If you are looking for theme-specific documentation you can find it [here](https://docs.bufferthemes.com/theme/persona).
